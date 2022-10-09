@@ -1,15 +1,15 @@
 module.exports = {
-    extends: ['@commitlint/config-conventional'],
-    rules: {
-        'type-enum': [
-            2,
-            'always',
-            ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore'],
-        ],
-        'subject-full-stop': [0, 'never'],
-        'subject-case': [0, 'never'],
-    },
-};
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore']
+    ],
+    'subject-full-stop': [0, 'never'],
+    'subject-case': [0, 'never']
+  }
+}
 // commit 的内容，只允许使用下面7个标识。
 
 // feat: 新功能
