@@ -10,7 +10,8 @@
     "lint:eslint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
     "lint:prettier": "prettier --write .",
     "lint:lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -23,6 +24,9 @@
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "@vitejs/plugin-vue": "^3.1.0",
+    "commitizen": "^4.2.5",
+    "commitlint": "^17.1.2",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.25.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -44,5 +48,10 @@
       "npm run lint:prettier",
       "git add ."
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
