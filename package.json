@@ -47,7 +47,9 @@
   "lint-staged": {
     "*.{vue,js}": [
       "npm run lint:prettier",
-      "npm run lint:check"
+      "npm run lint:check",
+      "git add ."
+      
     ]
   },
   "config": {
