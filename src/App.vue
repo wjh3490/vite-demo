@@ -22,8 +22,8 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 .logo {
-  height:  6em;
-  padding:  1.5em;
+  height: 6em;
+  padding: 1.5em;
   will-change: filter;
 }
 .logo:hover {
