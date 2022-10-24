@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   env: {
     browser: true,
@@ -5,6 +7,13 @@ module.exports = {
     node: true,
     // 解决’defineProps’ is not defined
     'vue/setup-compiler-macros': true
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: path.resolve(__dirname, './tsconfig.json')
+      }
+    }
   },
   extends: [
     'plugin:vue/vue3-essential',
@@ -29,7 +38,17 @@ module.exports = {
   rules: {
     'vue/no-multiple-template-root': 'off', // 关闭多根节点的校验
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'no-console': process.env.NODE_ENV === 'production' ? 'wran' : 'error',
-    'prettier/prettier': 'error'
+    'no-console': 'error',
+    'prettier/prettier': 'error',
+    'import/extensions': [
+      2,
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ]
   }
 }
