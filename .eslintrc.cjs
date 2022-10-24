@@ -29,8 +29,7 @@ module.exports = {
   rules: {
     'vue/no-multiple-template-root': 'off', // 关闭多根节点的校验
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'no-console': 'warn',
-    'no-var': 'error',
+    'no-console': process.env.NODE_ENV === 'production' ? 'wran' : 'error',
     'prettier/prettier': 'error'
   }
 }
