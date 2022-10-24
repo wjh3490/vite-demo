@@ -68,7 +68,7 @@
     ],
     "*.{less,css}": [
       "prettier --check",
-      "stylelint --custom-syntax postcss-less"
+      "stylelint"
     ]
   },
   "config": {
