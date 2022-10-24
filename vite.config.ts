@@ -2,10 +2,10 @@ import { join } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
-// import componentPlugin from './vitePlugins/componentPlugin'
+import componentPlugin from './vitePlugins/componentPlugin'
+import autoImportPlugin from './vitePlugins/autoImportPlugin'
 import compressPlugin from './vitePlugins/compressPlugin'
 import imageminPlugin from './vitePlugins/imageminPlugin'
-// import styleImportPlugin from './vitePlugins/styleImportPlugin'
 import visualizerPlugin from './vitePlugins/visualizerPlugin'
 
 const isDev = (mode: string) => mode === 'development'
@@ -16,8 +16,8 @@ export default ({ mode }) =>
       eslintPlugin({
         include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
       }),
-      // componentPlugin(),
-      // styleImportPlugin(),
+      componentPlugin(),
+      autoImportPlugin(),
       ...(isDev(mode)
         ? []
         : [compressPlugin('br'), imageminPlugin(), visualizerPlugin()])
@@ -32,5 +32,17 @@ export default ({ mode }) =>
       host: true,
       open: true,
       hmr: true
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            lodash: ['lodash'],
+            vue: ['vue'],
+            element: ['element-plus']
+          }
+        }
+      },
+      chunkSizeWarningLimit: 2000
     }
   })

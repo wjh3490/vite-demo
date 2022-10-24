@@ -1,13 +1,11 @@
 import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
-export default function configArcoResolverPlugin() {
-  const arcoResolverPlugin = Components({
+export default function configComponentsResolverPlugin() {
+  return Components({
     deep: false,
-    // resolvers: [ElementPlusResolver()],
-    resolvers: [],
+    resolvers: [ElementPlusResolver()],
     dirs: ['src/components'],
-    extensions: ['vue'],
-    dts: 'src/components.d.ts'
+    extensions: ['vue']
   })
-  return arcoResolverPlugin
 }
