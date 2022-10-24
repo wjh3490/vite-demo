@@ -20,4 +20,8 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
-<style></style>
+<style>
+.a {
+  color: #000;
+}
+</style>
