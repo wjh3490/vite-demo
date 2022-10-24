@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint:eslint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
+    "lint:eslint1": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
+    "lint:eslint": "eslint src/**/*.{js,jsx,vue,ts,tsx} ",
     "lint:prettier": "prettier --write .",
+    "lint:check": "prettier --check .",
     "lint:lint-staged": "lint-staged",
     "prepare": "husky install",
     "commit": "git-cz"
@@ -45,8 +47,7 @@
   "lint-staged": {
     "*.{vue,js}": [
       "npm run lint:eslint",
-      "npm run lint:prettier",
-      "git add ."
+      "npm run lint:check"
     ]
   },
   "config": {
