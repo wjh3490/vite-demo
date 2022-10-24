@@ -12,9 +12,7 @@
     "lint:prettier": "prettier --write .",
     "lint:check": "prettier --check .",
     "lint:lint-staged": "lint-staged",
-    "prepare": "husky install",
-    "commit": "git-cz",
-    "lint-staged": "npx lint-staged"
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -58,11 +56,7 @@
     "stylelint-order": "^5.0.0"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "prettier --check",
-      "eslint"
-    ],
-    "*.vue": [
+    "*.{js,ts,jsx,tsx,vue}": [
       "prettier --check",
       "eslint"
     ],
