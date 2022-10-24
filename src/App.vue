@@ -22,6 +22,6 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 <style>
 .a {
-  color: #000;
+  color: red;
 }
 </style>
