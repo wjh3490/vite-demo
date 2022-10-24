@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "report": "cross-env REPORT=true npm run build",
     "lint:eslint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
+    "lint:stylelint": "stylelint src/**/*.{vue,css,less} --fix",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -62,10 +63,12 @@
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx,vue}": [
       "prettier --check",
-      "eslint"
+      "eslint",
+      "stylelint"
     ],
     "*.{less,css}": [
-      "prettier --check"
+      "prettier --check",
+      "stylelint --custom-syntax postcss-less"
     ]
   },
   "config": {
