@@ -61,10 +61,12 @@
   "lint-staged": {
     "*.{js,ts,jsx,tsx,vue}": [
       "prettier --check",
-      "eslint"
+      "eslint",
+      "stylelint"
     ],
     "*.{less,css}": [
-      "prettier --check"
+      "prettier --check",
+      "stylelint"
     ]
   },
   "resolutions": {
