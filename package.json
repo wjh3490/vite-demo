@@ -59,7 +59,7 @@
     "vue-tsc": "^0.40.4"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx,vue}": [
+    "*.{js,ts,jsx,tsx,vue}": [
       "prettier --check",
       "eslint",
       "stylelint"
