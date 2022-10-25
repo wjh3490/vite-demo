@@ -8,13 +8,9 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
-  <el-button type="primary"> 1111 </el-button>
+
   <div class="card">
-    <button type="button" @click="count++">
-      count
-      iscomponents/HelloWorld.vuecomponents/HelloWorld.vuecomponents/HelloWorld.vuecomponents/HelloWorld.vuecomponents/HelloWorld.vue
-      {{ count }}
-    </button>
+    <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
