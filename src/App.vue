@@ -23,5 +23,6 @@ import HelloWorld from './components/HelloWorld.vue'
 <style>
 .a {
   color: red;
+  font-size: 16px;
 }
 </style>
