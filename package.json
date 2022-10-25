@@ -30,7 +30,6 @@
     "commitizen": "^4.2.5",
     "commitlint": "^17.1.2",
     "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.25.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -40,7 +39,6 @@
     "eslint-plugin-vue": "^9.6.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "mockjs": "^1.1.0",
     "prettier": "^2.7.1",
     "rollup": "^2.79.1",
     "rollup-plugin-visualizer": "^5.8.2",
@@ -71,9 +69,7 @@
       "stylelint"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
   }
 }
