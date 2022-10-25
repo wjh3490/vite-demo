@@ -7,10 +7,11 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div>
     <a-button type="primary">11</a-button>
-    <a href="https://vitejs.dev" target="_blank">
+    <a href="https://vitejs.dev" target="_blank" class="color">
+      111111
       <img
         src="/vite.svg"
-        class="logofdfdfdfdfdfdfdffdsfsdfdfdfdfdsssssssssfssssssssssssssssssssssssssssssssssssssssssssssssss"
+        class="color logofdfdfdfdfdfdfdffdsfsdfdfdfdfdsssssssssfssssssssssssssssssssssssssssssssssssssssssssssssss"
         alt="Vite logo"
       />
     </a>
@@ -20,9 +21,8 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
-<style>
-.a {
+<style scoped lang="less">
+.color {
   color: red;
-  font-size: 16px;
 }
 </style>
